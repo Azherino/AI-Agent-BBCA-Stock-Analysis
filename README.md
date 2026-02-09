@@ -20,15 +20,15 @@ Aplikasi **Analisis Saham BBCA** yang cerdas, menggabungkan data visualisasi int
 - **[Streamlit](https://streamlit.io/)**: Framework utama untuk membangun web app data science.
 - **[YFinance](https://pypi.org/project/yfinance/)**: Mengambil data historis saham BBCA secara real-time.
 - **[Plotly](https://plotly.com/)**: Membuat grafik interaktif dan responsif.
-- **[Ollama](https://ollama.com/)**: Menjalankan Large Language Model (Llama 3) secara lokal untuk analisis teks.
+- **[Groq API](https://groq.com/)**: Cloud AI Inference super cepat untuk menjalankan model Llama 3.
 
-## 🚀 Cara Menjalankan Project
+## 🚀 Cara Menjalankan Project (Lokal)
 
 ### Prasyarat
 
 Pastikan Anda telah menginstal:
 1. **Python 3.10+**
-2. **Ollama** (dan sudah pull model `llama3`)
+2. **API Key Groq** (Dapatkan gratis di [console.groq.com](https://console.groq.com))
 
 ### Langkah Instalasi
 
@@ -38,32 +38,32 @@ Pastikan Anda telah menginstal:
    cd AI-Agent-BBCA-Stock-Analysis
    ```
 
-2. **Buat Virtual Environment (Opsional tapi Disarankan)**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Mac/Linux
-   venv\Scripts\activate     # Windows
-   ```
-
-3. **Install Dependencies**
+2. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Pastikan Ollama Berjalan**
-   Buka terminal baru dan jalankan:
-   ```bash
-   ollama serve
-   ```
-   Pastikan model `llama3` sudah terunduh:
-   ```bash
-   ollama pull llama3
-   ```
-
-5. **Jalankan Aplikasi**
+3. **Jalankan Aplikasi**
    ```bash
    streamlit run app.py
    ```
+   *Saat pertama kali dijalankan, masukkan API Key Groq Anda di kolom yang tersedia di sidebar.*
+
+## 🌐 Cara Deploy ke Streamlit Cloud
+
+Aplikasi ini siap di-deploy secara online agar bisa diakses publik.
+
+1. **Push ke GitHub**: Upload project ini ke repository GitHub Anda.
+2. **Daftar Streamlit Cloud**: Login ke [share.streamlit.io](https://share.streamlit.io/).
+3. **Buat App Baru**: Pilih repository GitHub Anda dan file utama `app.py`.
+4. **Atur Secrets (PENTING)**:
+   - Di dashboard Streamlit Cloud, klik **Advanced Settings** -> **Secrets**.
+   - Tambahkan kode berikut:
+     ```toml
+     GROQ_API_KEY = "gsk_..."
+     ```
+     *(Ganti `gsk_...` dengan API Key Groq asli Anda)*
+5. **Deploy**: Klik tombol **Deploy**. Aplikasi Anda akan liven dalam hitungan detik!
 
 ## 📸 Preview
 
