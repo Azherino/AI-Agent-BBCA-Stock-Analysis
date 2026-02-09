@@ -67,7 +67,10 @@ Aplikasi ini siap di-deploy secara online agar bisa diakses publik.
 
 ## 📸 Preview
 
-*(Anda bisa menambahkan screenshot aplikasi di sini)*
+<img width="1920" height="1786" alt="screencapture-ai-agent-bbca-stock-analysis-l3bngswibbzqrlyvx4fcxs-streamlit-app-2026-02-09-19_05_29" src="https://github.com/user-attachments/assets/6904ace9-7976-42ba-8b39-995eb224c0dc" />
+<img width="1920" height="1786" alt="screencapture-ai-agent-bbca-stock-analysis-l3bngswibbzqrlyvx4fcxs-streamlit-app-2026-02-09-19_05_49" src="https://github.com/user-attachments/assets/fd01c986-6c99-4611-a478-3fd4e60a1160" />
+
+
 
 ## 🤝 Kontribusi
 
